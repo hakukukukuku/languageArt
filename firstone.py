@@ -39,7 +39,7 @@ def tiao_zheng(text):
 st.set_page_config(page_title='我的第一个网页')
 st.title('语言检测及纠正')
 user_input=st.text_area('请输入要发言的句子：',height=100)
-if st.button("开始分析"):
+if st.button("开始品鉴"):
     if user_input.strip()=="":
         st.warning('请输入句子再点击按钮')
     else:
@@ -51,4 +51,5 @@ if st.button("开始分析"):
                     result=tiao_zheng(user_input)
                     st.success(f'调整后的语句是：***{result}*')
             except Exception as e:
+
                 st.error("出错了，请稍后重试")
